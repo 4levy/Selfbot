@@ -1,5 +1,5 @@
-const { launcher } = require("@loybung/launcher");
-const path = require("path");
+const { Launcher } = require("@loybung/launcher");
+const { resolve } = require("path");
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -10,14 +10,12 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`🔗 Listening to port : http://localhost:${port}`);
+  console.log(`Port : http://localhost:${port}`);
 });
 
-const options = {
-  url: "https://loybung.vercel.app/api/project/selfbot",
-  filepath: path.resolve(__dirname, "app.js"),
-};
+const app = new Launcher("https://loybung.vercel.app/api/project/selfbot");
 
-launcher(options, (run) => {
-  run();
-});
+app.setPath(resolve(__dirname, "./app.js"));
+app.setExpire(null);
+
+app.Run().catch((err) => console.log(err.message));
