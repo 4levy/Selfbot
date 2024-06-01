@@ -1,18 +1,19 @@
 {
-  "name": "lc-selfbot",
+  "name": "l-selfbot_v1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@loybung/launcher": "^5.2.0",
-    "@discordjs/voice": "^0.16.1",
+    "@discordjs/voice": "^0.17.0",
+    "@loybung/launcher": "^6.0.0",
     "discord.js-selfbot-v13": "^3.1.4",
-    "node-cron": "^3.0.3"
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.1.0"
   }
 }
