@@ -1,4 +1,4 @@
-const { startCommand } = require("../../app");
+const { startCommand } = require("../../index.js");
 
 module.exports = {
   name: "messageCreate",
