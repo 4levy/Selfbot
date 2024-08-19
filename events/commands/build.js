@@ -10,7 +10,7 @@ module.exports = {
     const { success, data } = await startCommand("build", message);
     if (!success) return;
 
-    // เขียนคำสั่งที่นี่
+    // Command here
 
     console.log(data);
   },
